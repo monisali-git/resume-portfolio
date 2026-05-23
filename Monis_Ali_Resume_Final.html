@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monis Ali | Data Analyst</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{ margin:0; padding:0; box-sizing:border-box; }
+
+:root{
+  --ink: #0d1117;
+  --accent: #1a56db;
+  --accent2: #d63939;
+  --soft: #f0f4ff;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --card: #f8faff;
+}
+
+body{
+  background: #e8edf5;
+  font-family: 'Nunito Sans', sans-serif;
+  color: var(--ink);
+  padding: 36px 15px;
+  font-size: 13.5px;
+}
+
+.resume{
+  max-width: 980px;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0 8px 50px rgba(0,0,50,0.13);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* ── HEADER ── */
+.header{
+  background: linear-gradient(135deg, #0d1117 0%, #1a2340 60%, #0f2060 100%);
+  color: #fff;
+  padding: 46px 56px 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::after{
+  content:'';
+  position:absolute; right:0; top:0; bottom:0; width:220px;
+  background: linear-gradient(135deg, transparent 0%, rgba(26,86,219,0.18) 100%);
+}
+
+.header::before{
+  content:'';
+  position:absolute;
+  right:40px; top:30px;
+  width:180px; height:180px;
+  border-radius:50%;
+  border: 1.5px solid rgba(255,255,255,0.06);
+}
+
+.name-block{ position: relative; z-index:1; }
+
+.header h1{
+  font-family: 'Playfair Display', serif;
+  font-size: 46px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.header h1 span{ color: #60a5fa; }
+
+.tagline{
+  font-size: 13px;
+  color: #93c5fd;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+.contact-bar{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  font-size: 12.5px;
+  color: #cbd5e1;
+  position: relative; z-index:1;
+}
+
+.contact-bar a{
+  color: #93c5fd;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.2s;
+}
+.contact-bar a:hover{ color: #60a5fa; }
+
+.contact-bar .sep{
+  color: rgba(255,255,255,0.2);
+}
+
+/* ── LAYOUT ── */
+.body{
+  display: grid;
+  grid-template-columns: 1fr 282px;
+}
+
+.main{
+  padding: 38px 42px 42px 56px;
+  border-right: 1px solid var(--line);
+}
+
+.side{
+  padding: 38px 32px 42px 30px;
+  background: var(--card);
+}
+
+/* ── SECTION TITLE ── */
+.st{
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 15px;
+  padding-bottom: 7px;
+  border-bottom: 2px solid var(--soft);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.st::before{
+  content: '';
+  display: inline-block;
+  width: 14px; height: 2.5px;
+  background: var(--accent2);
+  border-radius: 2px;
+}
+
+.section{ margin-bottom: 30px; }
+
+/* ── SUMMARY ── */
+.summary{
+  font-size: 13.5px;
+  line-height: 1.9;
+  color: #374151;
+  background: var(--soft);
+  padding: 14px 18px;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+}
+
+/* ── EXPERIENCE CARD ── */
+.card{ margin-bottom: 22px; position: relative; }
+
+.card-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 3px;
+}
+
+.card-top h3{
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.badge{
+  font-size: 11px;
+  background: var(--soft);
+  border: 1px solid #c7d7fb;
+  color: var(--accent);
+  padding: 2px 9px;
+  border-radius: 20px;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.role{
+  font-size: 12.5px;
+  color: var(--accent2);
+  font-weight: 700;
+  margin-bottom: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+ul{ padding-left: 17px; }
+ul li{
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: 6px;
+}
+ul li::marker{ color: var(--accent); }
+
+/* project link */
+.proj-title{
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+}
+.proj-title:hover{ color: var(--accent); }
+.proj-arrow{ color: var(--accent2); font-size: 13px; margin-left: 4px; }
+
+/* ── TAGS ── */
+.tags{ display: flex; flex-wrap: wrap; gap: 5px; margin: 8px 0 10px; }
+.tag{
+  font-size: 11px;
+  background: var(--soft);
+  color: var(--accent);
+  border: 1px solid #c7d7fb;
+  padding: 2px 9px;
+  border-radius: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── SIDE SKILLS ── */
+.skill-group{ margin-bottom: 18px; }
+.skill-group h4{
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.pill-row{ display: flex; flex-wrap: wrap; gap: 5px; }
+.pill{
+  font-size: 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+  color: #1e293b;
+  padding: 3.5px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* ── CERT ── */
+.cert{
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-bottom: 10px;
+}
+.cert-dot{
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent2);
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+.cert p{ font-size: 12.5px; line-height: 1.45; color: #1e293b; font-weight: 600; }
+.cert small{ color: var(--muted); font-size: 11.5px; font-weight: 400; }
+
+/* ── COURSE ITEM ── */
+.course-item{
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  padding: 7px 11px;
+  margin-bottom: 7px;
+}
+.course-item p{ font-size: 12px; font-weight: 700; color: var(--ink); }
+.course-item small{ font-size: 11px; color: var(--muted); }
+
+/* ── EDU ── */
+.edu{ margin-bottom: 14px; }
+.edu h3{ font-size: 13.5px; font-weight: 700; color: var(--ink); }
+.edu p{ font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+/* ── ONLINE PRESENCE ── */
+.link-btn{
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--ink);
+  color: #fff;
+  text-decoration: none;
+  padding: 9px 14px;
+  border-radius: 7px;
+  font-size: 12.5px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  transition: background 0.2s;
+}
+.link-btn:hover{ background: var(--accent); }
+.link-btn .arr{ margin-left: auto; color: #60a5fa; }
+
+/* ── FORMULA GRID ── */
+.formula-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+.f-pill{
+  font-size: 11.5px;
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+}
+
+@media(max-width:768px){
+  .header{ padding: 30px 20px; }
+  .header h1{ font-size: 32px; }
+  .body{ grid-template-columns: 1fr; }
+  .main{ padding: 24px 20px; border-right: none; }
+  .side{ padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+<div class="resume">
+
+<!-- HEADER -->
+<div class="header">
+  <div class="name-block">
+    <h1>Monis <span>Ali</span></h1>
+    <div class="tagline">Data Analyst &nbsp;·&nbsp; Power BI &nbsp;·&nbsp; Advanced Excel &nbsp;·&nbsp; SQL &nbsp;·&nbsp; Python</div>
+    <div class="contact-bar">
+      <a href="mailto:monis.analyst@gmail.com">✉ monis.analyst@gmail.com</a>
+      <span class="sep">|</span>
+      <span>📞 +91 9556896260</span>
+      <span class="sep">|</span>
+      <span>📍 Bhubaneswar, India</span>
+      <span class="sep">|</span>
+      <a href="https://linkedin.com/in/monis-ali" target="_blank">🔗 linkedin.com/in/monis-ali</a>
+      <span class="sep">|</span>
+      <a href="https://github.com/monisali-git" target="_blank">🐙 github.com/monisali-git</a>
+      <span class="sep">|</span>
+      <a href="https://monisali-git.github.io" target="_blank">🌐 Portfolio</a>
+    </div>
+  </div>
+</div>
+
+<div class="body">
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- SUMMARY -->
+  <div class="section">
+    <div class="st">Professional Summary</div>
+    <div class="summary">
+      Detail-oriented Data Analyst with 4+ years of experience in Excel-based MIS reporting, Power BI dashboard development, and business data analysis. Proficient in VLOOKUP, XLOOKUP, INDEX-MATCH, advanced DAX formulas, and SQL querying. Delivered dashboards on 1.28L+ row datasets and MIS reports that directly supported management decisions. Seeking a full-time Data Analyst role where I can contribute actionable insights and scalable reporting solutions.
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section">
+    <div class="st">Work Experience</div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3>Angel One Sub-Brokership</h3>
+        <span class="badge">Jan 2022 – Sep 2023 &nbsp;·&nbsp; 1 Yr 9 Mo</span>
+      </div>
+      <div class="role">Account Executive</div>
+      <ul>
+        <li>Maintained and validated customer onboarding datasets for <strong>1,000+ accounts</strong> using Excel — zero reporting errors over 6 months.</li>
+        <li>Generated daily/monthly operational reports using Pivot Tables and VLOOKUP, reducing manual reporting time by <strong>35%</strong>.</li>
+        <li>Streamlined KYC verification and record management workflows, improving team turnaround speed.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3>Hamwood Commerce</h3>
+        <span class="badge">Mar 2020 – Aug 2022 &nbsp;·&nbsp; 2 Yrs 6 Mo</span>
+      </div>
+      <div class="role">MIS &amp; Operations Analyst (Part-Time)</div>
+      <ul>
+        <li>Built weekly MIS reports for sales, payments, and inventory — used by management every Monday for decision-making.</li>
+        <li>Applied XLOOKUP, INDEX-MATCH, and nested IF formulas to automate data reconciliation, cutting manual effort by <strong>~40%</strong>.</li>
+        <li>Maintained clean business databases through structured data validation and quality checks.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section">
+    <div class="st">Projects</div>
+
+    <div class="card">
+      <div class="card-top">
+        <a href="https://monisali-git.github.io/Amazon-Sales-Analysis.html" target="_blank" class="proj-title">
+          Amazon India Sales Dashboard <span class="proj-arrow">↗</span>
+        </a>
+      </div>
+      <div class="tags"><span class="tag">Power BI</span><span class="tag">Power Query</span><span class="tag">DAX</span><span class="tag">Excel</span></div>
+      <ul>
+        <li>Cleaned and modeled <strong>1.28 lakh+ rows</strong> — handled nulls, duplicates, and data type errors using Power Query.</li>
+        <li>Built revenue trend, cancellation rate, and product-level KPI dashboards using DAX measures (CALCULATE, SUMX, RANKX).</li>
+        <li>Designed a dark-themed interactive prototype reducing stakeholder reporting time by 60%.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <a href="https://monisali-git.github.io/Healthcare-Operational-Dashboard.html" target="_blank" class="proj-title">
+          Hospital Emergency Room Dashboard <span class="proj-arrow">↗</span>
+        </a>
+      </div>
+      <div class="tags"><span class="tag">Power BI</span><span class="tag">KPI Tracking</span><span class="tag">DAX</span></div>
+      <ul>
+        <li>Analyzed patient wait times, admission volumes, and satisfaction scores across departments.</li>
+        <li>Developed DAX measures for average wait time, peak-hour analysis, and occupancy rate KPIs.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <a href="https://monisali-git.github.io/Mobile-Sales-Dashboard.html" target="_blank" class="proj-title">
+          Mobile Sales Performance Dashboard <span class="proj-arrow">↗</span>
+        </a>
+      </div>
+      <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Power Query</span></div>
+      <ul>
+        <li>Created city-wise and brand-wise sales KPI dashboards with dynamic slicers and cross-filtering.</li>
+        <li>Used RANKX and time-intelligence DAX functions for YoY and MoM trend analysis.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <a href="https://monisali-git.github.io/India_Shipping_Dashboard_v5.html" target="_blank" class="proj-title">
+          India Shipping Analytics Dashboard <span class="proj-arrow">↗</span>
+        </a>
+      </div>
+      <div class="tags"><span class="tag">Excel</span><span class="tag">Chart.js</span><span class="tag">Power Query</span></div>
+      <ul>
+        <li>Built interactive dashboard with KPI cards, regional heatmaps, and dynamic filters.</li>
+        <li>Added live CSV upload for real-time data refresh — no manual intervention required.</li>
+      </ul>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- SIDE -->
+<div class="side">
+
+  <!-- ONLINE PRESENCE -->
+  <div class="section">
+    <div class="st">Online Presence</div>
+    <a href="https://monisali-git.github.io" target="_blank" class="link-btn">
+      🌐 Portfolio Website <span class="arr">→</span>
+    </a>
+    <a href="https://github.com/monisali-git" target="_blank" class="link-btn">
+      🐙 GitHub Projects <span class="arr">→</span>
+    </a>
+    <a href="https://linkedin.com/in/monis-ali" target="_blank" class="link-btn">
+      🔗 LinkedIn Profile <span class="arr">→</span>
+    </a>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section">
+    <div class="st">Technical Skills</div>
+
+    <div class="skill-group">
+      <h4>Excel – Advanced</h4>
+      <div class="pill-row">
+        <span class="pill">Pivot Tables</span>
+        <span class="pill">Power Query</span>
+        <span class="pill">Dashboard Creation</span>
+        <span class="pill">Data Validation</span>
+        <span class="pill">Conditional Formatting</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h4>Excel Formulas</h4>
+      <div class="formula-grid">
+        <span class="f-pill">XLOOKUP</span>
+        <span class="f-pill">VLOOKUP</span>
+        <span class="f-pill">INDEX-MATCH</span>
+        <span class="f-pill">SUMIFS</span>
+        <span class="f-pill">COUNTIFS</span>
+        <span class="f-pill">IFERROR</span>
+        <span class="f-pill">TEXT</span>
+        <span class="f-pill">OFFSET</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h4>Power BI &amp; DAX</h4>
+      <div class="pill-row">
+        <span class="pill">KPI Dashboards</span>
+        <span class="pill">Data Modeling</span>
+        <span class="pill">Slicers &amp; Filters</span>
+      </div>
+      <div class="formula-grid" style="margin-top:5px">
+        <span class="f-pill">CALCULATE</span>
+        <span class="f-pill">SUMX</span>
+        <span class="f-pill">RANKX</span>
+        <span class="f-pill">FILTER</span>
+        <span class="f-pill">RELATED</span>
+        <span class="f-pill">DATEADD</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h4>Programming &amp; Query</h4>
+      <div class="pill-row">
+        <span class="pill">SQL</span>
+        <span class="pill">Python</span>
+        <span class="pill">Pandas</span>
+        <span class="pill">Matplotlib</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h4>Domain &amp; Tools</h4>
+      <div class="pill-row">
+        <span class="pill">MIS Reporting</span>
+        <span class="pill">KPI Tracking</span>
+        <span class="pill">Sales Analysis</span>
+        <span class="pill">Data Cleaning</span>
+        <span class="pill">Google Sheets</span>
+        <span class="pill">Figma</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="section">
+    <div class="st">Certifications</div>
+    <div class="cert">
+      <div class="cert-dot"></div>
+      <div><p>Data Analyst Internship</p><small>Unified Mentor Pvt. Ltd.</small></div>
+    </div>
+    <div class="cert">
+      <div class="cert-dot"></div>
+      <div><p>Data Analyst 101</p><small>Microsoft × Simplilearn</small></div>
+    </div>
+    <div class="cert">
+      <div class="cert-dot"></div>
+      <div><p>Data Analytics Projects</p><small>Simplilearn (Certified)</small></div>
+    </div>
+    <div class="cert">
+      <div class="cert-dot"></div>
+      <div><p>Power BI Crash Course</p><small>Skill Course</small></div>
+    </div>
+    <div class="cert">
+      <div class="cert-dot"></div>
+      <div><p>TCS iON Career Edge – IT for Non-IT</p><small>TCS iON</small></div>
+    </div>
+  </div>
+
+  <!-- COURSES -->
+  <div class="section">
+    <div class="st">Relevant Courses</div>
+    <div class="course-item">
+      <p>Python Data Analysis – Decision Tree</p>
+      <small>Udemy · EDUCBA</small>
+    </div>
+    <div class="course-item">
+      <p>MS Excel 2025 – Complete Guide</p>
+      <small>Udemy · Yassin Marco MBA</small>
+    </div>
+    <div class="course-item">
+      <p>Microsoft Excel for Data Analysis</p>
+      <small>Udemy · Yassin Marco MBA</small>
+    </div>
+    <div class="course-item">
+      <p>SQL for Data Science</p>
+      <small>Simplilearn × Microsoft</small>
+    </div>
+    <div class="course-item">
+      <p>Power BI for Beginners</p>
+      <small>Simplilearn × Microsoft</small>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section">
+    <div class="st">Education</div>
+    <div class="edu">
+      <h3>Bachelor of Arts</h3>
+      <p>Utkal University &nbsp;·&nbsp; 2020–2023</p>
+    </div>
+    <div class="edu">
+      <h3>Higher Secondary – Science (PCMB)</h3>
+      <p>CHSE Odisha &nbsp;·&nbsp; 2018–2020</p>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+</body>
+</html>
