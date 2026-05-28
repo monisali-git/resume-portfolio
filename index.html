@@ -35,7 +35,6 @@ body{
   overflow: hidden;
 }
 
-/* ── HEADER ── */
 .header{
   background: linear-gradient(135deg, #0d1117 0%, #1a2340 60%, #0f2060 100%);
   color: #fff;
@@ -99,12 +98,8 @@ body{
   transition: color 0.2s;
 }
 .contact-bar a:hover{ color: #60a5fa; }
+.contact-bar .sep{ color: rgba(255,255,255,0.2); }
 
-.contact-bar .sep{
-  color: rgba(255,255,255,0.2);
-}
-
-/* ── LAYOUT ── */
 .body{
   display: grid;
   grid-template-columns: 1fr 282px;
@@ -120,7 +115,6 @@ body{
   background: var(--card);
 }
 
-/* ── SECTION TITLE ── */
 .st{
   font-size: 10.5px;
   font-weight: 700;
@@ -145,7 +139,6 @@ body{
 
 .section{ margin-bottom: 30px; }
 
-/* ── SUMMARY ── */
 .summary{
   font-size: 13.5px;
   line-height: 1.9;
@@ -156,7 +149,6 @@ body{
   border-radius: 0 6px 6px 0;
 }
 
-/* ── EXPERIENCE CARD ── */
 .card{ margin-bottom: 22px; position: relative; }
 
 .card-top{
@@ -202,7 +194,6 @@ ul li{
 }
 ul li::marker{ color: var(--accent); }
 
-/* project link */
 .proj-title{
   font-size: 15px;
   font-weight: 700;
@@ -212,7 +203,6 @@ ul li::marker{ color: var(--accent); }
 .proj-title:hover{ color: var(--accent); }
 .proj-arrow{ color: var(--accent2); font-size: 13px; margin-left: 4px; }
 
-/* ── TAGS ── */
 .tags{ display: flex; flex-wrap: wrap; gap: 5px; margin: 8px 0 10px; }
 .tag{
   font-size: 11px;
@@ -226,7 +216,6 @@ ul li::marker{ color: var(--accent); }
   letter-spacing: 0.5px;
 }
 
-/* ── SIDE SKILLS ── */
 .skill-group{ margin-bottom: 18px; }
 .skill-group h4{
   font-size: 11px;
@@ -248,7 +237,6 @@ ul li::marker{ color: var(--accent); }
   font-weight: 500;
 }
 
-/* ── CERT ── */
 .cert{
   display: flex;
   align-items: flex-start;
@@ -265,7 +253,6 @@ ul li::marker{ color: var(--accent); }
 .cert p{ font-size: 12.5px; line-height: 1.45; color: #1e293b; font-weight: 600; }
 .cert small{ color: var(--muted); font-size: 11.5px; font-weight: 400; }
 
-/* ── COURSE ITEM ── */
 .course-item{
   background: #fff;
   border: 1px solid var(--line);
@@ -277,12 +264,10 @@ ul li::marker{ color: var(--accent); }
 .course-item p{ font-size: 12px; font-weight: 700; color: var(--ink); }
 .course-item small{ font-size: 11px; color: var(--muted); }
 
-/* ── EDU ── */
 .edu{ margin-bottom: 14px; }
 .edu h3{ font-size: 13.5px; font-weight: 700; color: var(--ink); }
 .edu p{ font-size: 12px; color: var(--muted); margin-top: 2px; }
 
-/* ── ONLINE PRESENCE ── */
 .link-btn{
   display: flex;
   align-items: center;
@@ -300,7 +285,6 @@ ul li::marker{ color: var(--accent); }
 .link-btn:hover{ background: var(--accent); }
 .link-btn .arr{ margin-left: auto; color: #60a5fa; }
 
-/* ── FORMULA GRID ── */
 .formula-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -399,6 +383,7 @@ ul li::marker{ color: var(--accent); }
   <div class="section">
     <div class="st">Projects</div>
 
+    <!-- AMAZON -->
     <div class="card">
       <div class="card-top">
         <a href="https://monisali-git.github.io/data-analytics-dashboards/amazon_dashboard.html" target="_blank" class="proj-title">
@@ -407,12 +392,14 @@ ul li::marker{ color: var(--accent); }
       </div>
       <div class="tags"><span class="tag">Power BI</span><span class="tag">Power Query</span><span class="tag">DAX</span><span class="tag">Excel</span></div>
       <ul>
-        <li>Cleaned and modeled <strong>1.28 lakh+ rows</strong> — handled nulls, duplicates, and data type errors using Power Query.</li>
-        <li>Built revenue trend, cancellation rate, and product-level KPI dashboards using DAX measures (CALCULATE, SUMX, RANKX).</li>
-        <li>Designed a dark-themed interactive prototype reducing stakeholder reporting time by 60%.</li>
+        <li>Cleaned and modeled <strong>1,28,970 rows</strong> of order data — handled nulls, duplicates, and data type errors using Power Query.</li>
+        <li>Built KPI cards for Delivered (22.3%), Cancellation Rate (14.2%), FBA Share (69.6%), and Return Rate using DAX measures (CALCULATE, SUMX, RANKX).</li>
+        <li>Designed category, quarter, and state-wise filters with monthly order trend and shipping service level breakdown.</li>
+        <li>Reduced stakeholder reporting time by <strong>60%</strong> with an interactive dark-themed dashboard prototype.</li>
       </ul>
     </div>
 
+    <!-- HOSPITAL -->
     <div class="card">
       <div class="card-top">
         <a href="https://monisali-git.github.io/data-analytics-dashboards/hospital_dashboard.html" target="_blank" class="proj-title">
@@ -421,11 +408,14 @@ ul li::marker{ color: var(--accent); }
       </div>
       <div class="tags"><span class="tag">Power BI</span><span class="tag">KPI Tracking</span><span class="tag">DAX</span></div>
       <ul>
-        <li>Analyzed patient wait times, admission volumes, and satisfaction scores across departments.</li>
-        <li>Developed DAX measures for average wait time, peak-hour analysis, and occupancy rate KPIs.</li>
+        <li>Analyzed patient data across <strong>2023–2024</strong> with dynamic year filters for comparative performance tracking.</li>
+        <li>Developed DAX measures for Avg Wait Time, Satisfaction Score (out of 10), and Admission Rate KPIs.</li>
+        <li>Visualized patient flow by age group, gender distribution, department referrals, and monthly trend charts.</li>
+        <li>Enabled management to identify peak-hour bottlenecks and improve resource allocation decisions.</li>
       </ul>
     </div>
 
+    <!-- MOBILE -->
     <div class="card">
       <div class="card-top">
         <a href="https://monisali-git.github.io/data-analytics-dashboards/mobile_sales_dashboard.html" target="_blank" class="proj-title">
@@ -434,11 +424,14 @@ ul li::marker{ color: var(--accent); }
       </div>
       <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Power Query</span></div>
       <ul>
-        <li>Created city-wise and brand-wise sales KPI dashboards with dynamic slicers and cross-filtering.</li>
-        <li>Used RANKX and time-intelligence DAX functions for YoY and MoM trend analysis.</li>
+        <li>Built city-wise and brand-wise sales dashboard for <strong>3,835 transactions</strong> across India's 2023 mobile market.</li>
+        <li>Added dynamic slicers for 5 brands (Apple, Samsung, OnePlus, Vivo, Xiaomi) and 7 major cities with cross-filtering.</li>
+        <li>Used RANKX and time-intelligence DAX functions for monthly sales trend and top-selling model analysis.</li>
+        <li>Tracked Avg Order Value, Customer Rating, Revenue by Age Group, and Payment Mode split in a single view.</li>
       </ul>
     </div>
 
+    <!-- SHIPPING -->
     <div class="card">
       <div class="card-top">
         <a href="https://monisali-git.github.io/data-analytics-dashboards/india_shipping_dashboard.html" target="_blank" class="proj-title">
@@ -447,8 +440,10 @@ ul li::marker{ color: var(--accent); }
       </div>
       <div class="tags"><span class="tag">Excel</span><span class="tag">Chart.js</span><span class="tag">Power Query</span></div>
       <ul>
-        <li>Built interactive dashboard with KPI cards, regional heatmaps, and dynamic filters.</li>
-        <li>Added live CSV upload for real-time data refresh — no manual intervention required.</li>
+        <li>Built logistics analytics dashboard covering sales &amp; shipping data across <strong>4 regions</strong> and <strong>20 states</strong>.</li>
+        <li>Added live Excel/CSV upload feature for real-time data refresh — zero manual intervention required.</li>
+        <li>Designed cross-dimensional heatmaps: Segment × Region and Category × Region for deep-dive analysis.</li>
+        <li>Included KPI cards for Revenue by Category, Customer Segment donut, and Ship Mode split charts.</li>
       </ul>
     </div>
 
