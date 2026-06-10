@@ -302,12 +302,31 @@ ul li::marker{ color: var(--accent); }
   text-align: center;
 }
 
+/* Internship strip - compact */
+.internship-strip{
+  background: var(--soft);
+  border: 1px solid #c7d7fb;
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  padding: 11px 16px;
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.internship-strip .i-left h3{ font-size: 14px; font-weight: 700; color: var(--ink); }
+.internship-strip .i-left p{ font-size: 12px; color: var(--accent2); font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; margin-top: 2px; }
+.internship-strip .i-right{ font-size: 11px; background: #fff; border: 1px solid #c7d7fb; color: var(--accent); padding: 3px 10px; border-radius: 20px; font-weight: 600; white-space: nowrap; }
+
 @media(max-width:768px){
   .header{ padding: 30px 20px; }
   .header h1{ font-size: 32px; }
   .body{ grid-template-columns: 1fr; }
   .main{ padding: 24px 20px; border-right: none; }
   .side{ padding: 24px 20px; }
+  .internship-strip{ flex-direction: column; align-items: flex-start; }
 }
 </style>
 </head>
@@ -344,38 +363,19 @@ ul li::marker{ color: var(--accent); }
   <div class="section">
     <div class="st">Professional Summary</div>
     <div class="summary">
-      Detail-oriented Data Analyst with 4+ years of experience in Excel-based MIS reporting, Power BI dashboard development, and business data analysis. Proficient in VLOOKUP, XLOOKUP, INDEX-MATCH, advanced DAX formulas, and SQL querying. Delivered dashboards on 1.28L+ row datasets and MIS reports that directly supported management decisions. Seeking a full-time Data Analyst role where I can contribute actionable insights and scalable reporting solutions.
+      Results-driven Data Analyst with hands-on experience in Power BI dashboard development, advanced Excel MIS reporting, and SQL-based data analysis. Built interactive dashboards on datasets up to <strong>1,28,970 rows</strong>, reducing stakeholder reporting time by up to <strong>60%</strong>. Proficient in DAX, Power Query, XLOOKUP, INDEX-MATCH, and Python (Pandas). Seeking a full-time Data Analyst / BI Developer role to deliver actionable insights and scalable reporting solutions.
     </div>
   </div>
 
-  <!-- EXPERIENCE -->
+  <!-- INTERNSHIP - compact strip -->
   <div class="section">
-    <div class="st">Work Experience</div>
-
-    <div class="card">
-      <div class="card-top">
-        <h3>Angel One Sub-Brokership</h3>
-        <span class="badge">Jan 2022 – Apr 2023 &nbsp;·&nbsp; 1 Yr 4 Mo</span>
+    <div class="st">Internship</div>
+    <div class="internship-strip">
+      <div class="i-left">
+        <h3>Unified Mentor Pvt. Ltd.</h3>
+        <p>Data Analytics Intern</p>
       </div>
-      <div class="role">Account Executive</div>
-      <ul>
-        <li>Maintained and validated customer onboarding datasets for <strong>1,000+ accounts</strong> using Excel — zero reporting errors over 6 months.</li>
-        <li>Generated daily/monthly operational reports using Pivot Tables and VLOOKUP, reducing manual reporting time by <strong>35%</strong>.</li>
-        <li>Streamlined KYC verification and record management workflows, improving team turnaround speed.</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="card-top">
-        <h3>Hamwood Commerce</h3>
-        <span class="badge">Nov 2023 – Jul 2025 &nbsp;·&nbsp; 2 Yrs 8 Mo</span>
-      </div>
-      <div class="role">MIS &amp; Operations Analyst (Part-Time)</div>
-      <ul>
-        <li>Built weekly MIS reports for sales, payments, and inventory — used by management every Monday for decision-making.</li>
-        <li>Applied XLOOKUP, INDEX-MATCH, and nested IF formulas to automate data reconciliation, cutting manual effort by <strong>~40%</strong>.</li>
-        <li>Maintained clean business databases through structured data validation and quality checks.</li>
-      </ul>
+      <div class="i-right">Oct 2024 – Nov 2024 &nbsp;·&nbsp; 1 Month</div>
     </div>
   </div>
 
@@ -392,10 +392,10 @@ ul li::marker{ color: var(--accent); }
       </div>
       <div class="tags"><span class="tag">Power BI</span><span class="tag">Power Query</span><span class="tag">DAX</span><span class="tag">Excel</span></div>
       <ul>
-        <li>Cleaned and modeled <strong>1,28,970 rows</strong> of order data — handled nulls, duplicates, and data type errors using Power Query.</li>
-        <li>Built KPI cards for Delivered (22.3%), Cancellation Rate (14.2%), FBA Share (69.6%), and Return Rate using DAX measures (CALCULATE, SUMX, RANKX).</li>
-        <li>Designed category, quarter, and state-wise filters with monthly order trend and shipping service level breakdown.</li>
-        <li>Reduced stakeholder reporting time by <strong>60%</strong> with an interactive dark-themed dashboard prototype.</li>
+        <li>Cleaned and modeled <strong>1,28,970 rows</strong> of raw order data — resolved nulls, duplicates, and type errors using Power Query, achieving <strong>100% data accuracy</strong> before modeling.</li>
+        <li>Engineered <strong>12+ DAX measures</strong> (CALCULATE, SUMX, RANKX) to compute KPIs: Delivery Rate (22.3%), Cancellation Rate (14.2%), FBA Share (69.6%), and Return Rate.</li>
+        <li>Designed <strong>4 interactive filter dimensions</strong> (category, quarter, state, shipping) enabling drill-down analysis across <strong>19 product categories</strong>.</li>
+        <li>Reduced stakeholder reporting time by <strong>60%</strong> by replacing manual Excel reports with a single self-serve dashboard.</li>
       </ul>
     </div>
 
@@ -408,10 +408,10 @@ ul li::marker{ color: var(--accent); }
       </div>
       <div class="tags"><span class="tag">Power BI</span><span class="tag">KPI Tracking</span><span class="tag">DAX</span></div>
       <ul>
-        <li>Analyzed patient data across <strong>2023–2024</strong> with dynamic year filters for comparative performance tracking.</li>
-        <li>Developed DAX measures for Avg Wait Time, Satisfaction Score (out of 10), and Admission Rate KPIs.</li>
-        <li>Visualized patient flow by age group, gender distribution, department referrals, and monthly trend charts.</li>
-        <li>Enabled management to identify peak-hour bottlenecks and improve resource allocation decisions.</li>
+        <li>Analyzed <strong>2 years of patient data (2023–2024)</strong> with dynamic year-over-year comparison filters for performance benchmarking.</li>
+        <li>Built <strong>3 core KPI measures</strong> — Avg Wait Time, Satisfaction Score (out of 10), and Admission Rate — surfacing trends invisible in raw data.</li>
+        <li>Visualized patient flow across <strong>5 age groups, 2 gender segments, and 8 department referral paths</strong> with monthly trend charts.</li>
+        <li>Enabled management to identify peak-hour bottlenecks, supporting data-driven resource allocation decisions.</li>
       </ul>
     </div>
 
@@ -424,9 +424,9 @@ ul li::marker{ color: var(--accent); }
       </div>
       <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Power Query</span></div>
       <ul>
-        <li>Built city-wise and brand-wise sales dashboard for <strong>3,835 transactions</strong> across India's 2023 mobile market.</li>
-        <li>Added dynamic slicers for 5 brands (Apple, Samsung, OnePlus, Vivo, Xiaomi) and 7 major cities with cross-filtering.</li>
-        <li>Tracked Avg Order Value, Customer Rating, Revenue by Age Group, and Payment Mode split in a single view.</li>
+        <li>Modeled <strong>3,835 sales transactions</strong> across India's 2023 mobile market — cleaned and structured data using Power Query before visualization.</li>
+        <li>Built cross-filtering slicers for <strong>5 brands × 7 cities</strong>, enabling instant segment-level comparisons in a single dashboard view.</li>
+        <li>Tracked <strong>5 KPIs</strong> simultaneously — Avg Order Value, Customer Rating, Revenue by Age Group, Payment Mode split, and Brand-wise Revenue — eliminating need for multiple separate reports.</li>
       </ul>
     </div>
 
@@ -437,12 +437,27 @@ ul li::marker{ color: var(--accent); }
           India Shipping Analytics Dashboard <span class="proj-arrow">↗</span>
         </a>
       </div>
-      <div class="tags"><span class="tag">Excel</span><span class="tag">Claude AI + Chart.js</span><span class="tag">Power Query</span></div>
+      <div class="tags"><span class="tag">Excel</span><span class="tag">Chart.js</span><span class="tag">Power Query</span><span class="tag">HTML/CSS/JS</span></div>
       <ul>
-        <li>Built logistics analytics dashboard covering sales &amp; shipping data across <strong>4 regions</strong> and <strong>20 states</strong>.</li>
-        <li>Added live Excel/CSV upload feature for real-time data refresh — zero manual intervention required.</li>
-        <li>Designed cross-dimensional heatmaps: Segment × Region and Category × Region for deep-dive analysis.</li>
-        <li>Included KPI cards for Revenue by Category, Customer Segment donut, and Ship Mode split charts.</li>
+        <li>Built logistics analytics dashboard covering <strong>5,000 records</strong> across <strong>4 regions and 20 states</strong> — end-to-end from raw CSV to live web dashboard.</li>
+        <li>Implemented live CSV/Excel upload feature, enabling <strong>zero-intervention data refresh</strong> — no manual re-export required.</li>
+        <li>Designed <strong>2 cross-dimensional heatmaps</strong> (Segment × Region, Category × Region) exposing revenue concentration patterns not visible in standard charts.</li>
+        <li>Delivered <strong>6 KPI cards</strong> + donut and bar charts covering Revenue by Category, Customer Segment, and Ship Mode split in a single-page view.</li>
+      </ul>
+    </div>
+
+    <!-- AI WORKFORCE -->
+    <div class="card">
+      <div class="card-top">
+        <a href="https://monisali-git.github.io/ai-workforce-analytics-dashboard" target="_blank" class="proj-title">
+          AI Workforce Analytics Dashboard <span class="proj-arrow">↗</span>
+        </a>
+      </div>
+      <div class="tags"><span class="tag">HTML/CSS/JS</span><span class="tag">Chart.js</span><span class="tag">Data Viz</span></div>
+      <ul>
+        <li>Built an interactive workforce analytics dashboard covering <strong>AI adoption trends across 5 industries and 8 job categories</strong>.</li>
+        <li>Designed <strong>6 chart types</strong> (bar, line, donut, scatter, heatmap, area) with dynamic filters for role, industry, and automation risk level.</li>
+        <li>Glassmorphic light-theme UI with KPI cards tracking Automation Risk %, Avg Salary Impact, and Reskilling Rate across segments.</li>
       </ul>
     </div>
 
@@ -564,35 +579,30 @@ ul li::marker{ color: var(--accent); }
   </div>
 
   <!-- COURSES -->
-<div class="section">
-  <div class="st">Relevant Courses</div>
-
-  <div class="course-item">
-    <p>Microsoft Excel for Data Analysis</p>
-    <small>Udemy · Yassin Marco MBA</small>
+  <div class="section">
+    <div class="st">Relevant Courses</div>
+    <div class="course-item">
+      <p>Microsoft Excel for Data Analysis</p>
+      <small>Udemy · Yassin Marco MBA</small>
+    </div>
+    <div class="course-item">
+      <p>MS Excel 2025 – Complete Guide</p>
+      <small>Udemy · Yassin Marco MBA</small>
+    </div>
+    <div class="course-item">
+      <p>SQL for Data Science</p>
+      <small>Simplilearn × Microsoft</small>
+    </div>
+    <div class="course-item">
+      <p>Power BI for Beginners</p>
+      <small>Simplilearn × Microsoft</small>
+    </div>
+    <div class="course-item">
+      <p>Python Data Analysis &amp; Decision Tree</p>
+      <small>Udemy · EDUCBA</small>
+    </div>
   </div>
 
-  <div class="course-item">
-    <p>MS Excel 2025 – Complete Guide</p>
-    <small>Udemy · Yassin Marco MBA</small>
-  </div>
-
-  <div class="course-item">
-    <p>SQL for Data Science</p>
-    <small>Simplilearn × Microsoft</small>
-  </div>
-
-  <div class="course-item">
-    <p>Power BI for Beginners</p>
-    <small>Simplilearn × Microsoft</small>
-  </div>
-
-  <div class="course-item">
-    <p>Python Data Analysis & Decision Tree</p>
-    <small>Udemy · EDUCBA</small>
-  </div>
-
-</div>
   <!-- EDUCATION -->
   <div class="section">
     <div class="st">Education</div>
